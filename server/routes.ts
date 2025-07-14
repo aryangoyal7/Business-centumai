@@ -4,7 +4,7 @@ import { storage } from "./storage";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Health check route for deployment
-  app.get("/", (_req, res) => {
+  app.get("/health", (_req, res) => {
     res.status(200).json({ status: "ok", message: "Server is running" });
   });
 

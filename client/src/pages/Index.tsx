@@ -319,9 +319,9 @@ const Index = () => {
             <Card className="overflow-hidden">
               <div className="relative h-64">
                 <iframe
-                  src="https://www.youtube.com/embed/2shCbzHEYSs"
+                  src="https://drive.google.com/file/d/1KO4utw0gOVWTQDdk-Vs5kSS45q6f7saO/preview"
                   title="Teacher Demo Video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="autoplay"
                   allowFullScreen
                   className="w-full h-full"
                 ></iframe>
@@ -337,9 +337,9 @@ const Index = () => {
             <Card className="overflow-hidden">
               <div className="relative h-64">
                 <iframe
-                  src="https://www.youtube.com/embed/IwB5YDfQ8DA"
+                  src="https://drive.google.com/file/d/1bh5-yMLprrbrtY77pYC-Mj6XS9pkyef2/preview"
                   title="Student Demo Video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="autoplay"
                   allowFullScreen
                   className="w-full h-full"
                 ></iframe>

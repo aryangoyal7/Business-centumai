@@ -44,7 +44,7 @@ const Index = () => {
                 <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
               </div>
             </div>
-            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700" onClick={() => window.open('https://mira-centum-ai.replit.app/', '_blank')}>
+            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700" onClick={() => window.open('https://centumai.in', '_blank')}>
               Try Mira
             </Button>
           </div>
@@ -66,7 +66,7 @@ const Index = () => {
               that go far beyond traditional LLM chatbots, Google search or solution modules.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3" onClick={() => window.open('https://mira-centum-ai.replit.app/', '_blank')}>
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3" onClick={() => window.open('https://centumai.in', '_blank')}>
                 Get Started
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-2">
@@ -296,7 +296,7 @@ const Index = () => {
             <p className="text-lg text-gray-600 mb-6">
               Experience the difference that true agentic AI can make in education
             </p>
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-lg px-8 py-3" onClick={() => window.open('https://mira-centum-ai.replit.app/', '_blank')}>
+            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-lg px-8 py-3" onClick={() => window.open('https://centumai.in', '_blank')}>
               Try Mira Today
             </Button>
           </div>
@@ -502,7 +502,7 @@ const Index = () => {
               <div className="mt-8">
                 <h4 className="font-semibold mb-4">Quick Actions</h4>
                 <div className="space-y-3">
-                  <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700" onClick={() => window.open('https://mira-centum-ai.replit.app/', '_blank')}>
+                  <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700" onClick={() => window.open('https://centumai.in', '_blank')}>
                     Try Mira Now
                   </Button>
                   

@@ -3,6 +3,11 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Health check route for deployment
+  app.get("/", (_req, res) => {
+    res.status(200).json({ status: "ok", message: "Server is running" });
+  });
+
   // put application routes here
   // prefix all routes with /api
 

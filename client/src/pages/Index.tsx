@@ -12,6 +12,7 @@ const Index = () => {
     email: '',
     message: ''
   });
+  const [activeTab, setActiveTab] = useState('teachers');
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -77,63 +78,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Introducing Mira Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-50 via-blue-50 to-indigo-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-6">
-              <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center">
-                <Brain className="h-8 w-8 text-white" />
-              </div>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Meet{' '}
-              <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                Mira
-              </span>
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Discover agentic AI that does more than answer—it thinks, reasons, and adapts to each learner for a uniquely personalized educational journey.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6 flex items-center">
-                <Sparkles className="h-8 w-8 text-purple-600 mr-3" />
-                What Makes Mira Special?
-              </h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-lg mb-2">Curriculum-Aligned Guidance
-</h4>
-                    <p className="text-gray-600">Mira ensures every response is tailored to your specific curriculum. Students can focus on learning, while Mira delivers targeted solutions and resources directly relevant to their coursework—no extra searching required..</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-lg mb-2">Reasoning & Planning</h4>
-                    <p className="text-gray-600">Mira can break down complex problems, create step-by-step solutions, and generate comprehensive lesson plans that align with curriculum standards.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-lg mb-2">Curriculum-Referenced Delivery</h4>
-                    <p className="text-gray-600">Mira ensures that every learning experience is grounded in the official curriculum by referencing trusted resources such as NCERT textbooks, question banks, and model papers. Instead of students spending time searching for reliable materials, Mira automatically pulls from these authoritative sources</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            
-          </div>
-        </div>
-      </section>
-
       {/* Product Features */}
       <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -194,6 +138,306 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet Mira Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-50 via-blue-50 to-indigo-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center mb-6">
+              <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center">
+                <Brain className="h-8 w-8 text-white" />
+              </div>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Meet{' '}
+              <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                Mira
+              </span>
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
+              Discover agentic AI that does more than answer—it thinks, reasons, and adapts to each learner for a uniquely personalized educational journey.
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <div className="max-w-6xl w-full">
+              <div className="bg-white rounded-xl shadow-2xl p-8 border border-gray-100">
+                <div className="text-center mb-12">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Brain className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4">Features for Students and Teachers</h3>
+                  <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                    Specialized interfaces designed to revolutionize how educators teach and students learn, 
+                    powered by advanced agentic AI that thinks, reasons, and adapts.
+                  </p>
+                  
+                  {/* Toggle Buttons */}
+                  <div className="flex justify-center mb-8">
+                    <div className="bg-gray-100 rounded-lg p-1 flex">
+                      <button
+                        onClick={() => setActiveTab('teachers')}
+                        className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
+                          activeTab === 'teachers'
+                            ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md'
+                            : 'text-gray-600 hover:text-gray-900'
+                        }`}
+                      >
+                        For Teachers
+                      </button>
+                      <button
+                        onClick={() => setActiveTab('students')}
+                        className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
+                          activeTab === 'students'
+                            ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-md'
+                            : 'text-gray-600 hover:text-gray-900'
+                        }`}
+                      >
+                        For Students
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="min-h-[400px]">
+                  {/* Teacher Dashboard */}
+                  {activeTab === 'teachers' && (
+                    <div className="animate-fade-in">
+                      <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 rounded-2xl p-6 shadow-lg border border-blue-100">
+                        <div className="text-center mb-6">
+                          <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <GraduationCap className="h-6 w-6 text-white" />
+                          </div>
+                          <h4 className="text-2xl font-bold text-gray-900 mb-2">Teacher Dashboard</h4>
+                          <p className="text-gray-600">Empower educators with AI-driven teaching tools</p>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div className="bg-white rounded-xl p-4 shadow-md border border-gray-50 hover:shadow-lg transition-shadow">
+                            <div className="flex items-start space-x-3">
+                              <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span className="text-xl">📝</span>
+                              </div>
+                              <div className="flex-1">
+                                <h5 className="text-lg font-bold text-blue-600 mb-1">Intelligent Exam Generator</h5>
+                                <p className="text-gray-600 mb-2 text-sm">
+                                  Creates high-quality, board-aligned exams with precision. Customize question types, 
+                                  difficulty levels, and special requirements.
+                                </p>
+                                <div className="flex flex-wrap gap-1">
+                                  <span className="bg-blue-50 text-blue-600 text-xs px-2 py-1 rounded">Board Aligned</span>
+                                  <span className="bg-purple-50 text-purple-600 text-xs px-2 py-1 rounded">Custom Difficulty</span>
+                                  <span className="bg-green-50 text-green-600 text-xs px-2 py-1 rounded">Multiple Formats</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div className="bg-white rounded-xl p-4 shadow-md border border-gray-50 hover:shadow-lg transition-shadow">
+                            <div className="flex items-start space-x-3">
+                              <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span className="text-xl">📚</span>
+                              </div>
+                              <div className="flex-1">
+                                <h5 className="text-lg font-bold text-purple-600 mb-1">Comprehensive Lesson Generator</h5>
+                                <p className="text-gray-600 mb-2 text-sm">
+                                  Generates extensive lesson plans with problem-solving frameworks, takeaway problems, 
+                                  importance ratings, and page references.
+                                </p>
+                                <div className="space-y-1">
+                                  <div className="flex items-center text-xs text-gray-600">
+                                    <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2"></div>
+                                    Problem-solving frameworks
+                                  </div>
+                                  <div className="flex items-center text-xs text-gray-600">
+                                    <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></div>
+                                    Takeaway problems for practice
+                                  </div>
+                                  <div className="flex items-center text-xs text-gray-600">
+                                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></div>
+                                    Importance ratings & relevance
+                                  </div>
+                                  <div className="flex items-center text-xs text-gray-600">
+                                    <div className="w-1.5 h-1.5 bg-orange-400 rounded-full mr-2"></div>
+                                    Page/chapter references
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Student Dashboard */}
+                  {activeTab === 'students' && (
+                    <div className="animate-fade-in">
+                      <div className="bg-gradient-to-br from-green-50 via-blue-50 to-cyan-50 rounded-2xl p-6 shadow-lg border border-green-100">
+                        <div className="text-center mb-6">
+                          <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <BookOpen className="h-6 w-6 text-white" />
+                          </div>
+                          <h4 className="text-2xl font-bold text-gray-900 mb-2">Student Dashboard</h4>
+                          <p className="text-gray-600">Personalized learning experience for every student</p>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div className="bg-white rounded-xl p-4 shadow-md border border-gray-50 hover:shadow-lg transition-shadow">
+                            <div className="flex items-start space-x-3">
+                              <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span className="text-xl">💬</span>
+                              </div>
+                              <div className="flex-1">
+                                <h5 className="text-lg font-bold text-green-600 mb-1">Advanced Doubt Chat</h5>
+                                <p className="text-gray-600 mb-2 text-sm">
+                                  Step-by-step doubt resolution with outputs superior to ChatGPT, Google Search, or YouTube. 
+                                  Get contextual, curriculum-aligned answers instantly.
+                                </p>
+                                <div className="bg-green-50 p-2 rounded-lg">
+                                  <p className="text-xs text-green-700 font-medium">
+                                    ✨ Better than traditional AI - understands your curriculum
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div className="bg-white rounded-xl p-4 shadow-md border border-gray-50 hover:shadow-lg transition-shadow">
+                            <div className="flex items-start space-x-3">
+                              <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span className="text-xl">🎯</span>
+                              </div>
+                              <div className="flex-1">
+                                <h5 className="text-lg font-bold text-blue-600 mb-1">Interactive Practice Playground</h5>
+                                <p className="text-gray-600 mb-2 text-sm">
+                                  Evaluate answers and get mistakes corrected instantly. Click a picture of your solution 
+                                  for immediate, detailed feedback and improvement suggestions.
+                                </p>
+                                <div className="bg-blue-50 p-2 rounded-lg">
+                                  <p className="text-xs text-blue-700 font-medium">
+                                    📸 Photo-based solution analysis with instant feedback
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div className="bg-white rounded-xl p-6 shadow-md border border-gray-50 hover:shadow-lg transition-shadow md:col-span-2">
+                            <div className="flex items-start space-x-4">
+                              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span className="text-2xl">🚀</span>
+                              </div>
+                              <div className="flex-1">
+                                <h5 className="text-lg font-bold text-purple-600 mb-2">Enhanced Learning Tools</h5>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                  <div className="flex items-center space-x-3">
+                                    <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                                      <span className="text-sm">📋</span>
+                                    </div>
+                                    <div>
+                                      <p className="font-medium text-gray-900">Practice Question Generator</p>
+                                      <p className="text-sm text-gray-600">Unlimited targeted practice questions</p>
+                                    </div>
+                                  </div>
+                                  <div className="flex items-center space-x-3">
+                                    <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center">
+                                      <span className="text-sm">📄</span>
+                                    </div>
+                                    <div>
+                                      <p className="font-medium text-gray-900">PDF Summarizing Agent</p>
+                                      <p className="text-sm text-gray-600">Teaches from any document or PDF</p>
+                                    </div>
+                                  </div>
+                                  <div className="flex items-center space-x-3">
+                                    <div className="w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center">
+                                      <span className="text-sm">🤖</span>
+                                    </div>
+                                    <div>
+                                      <p className="font-medium text-gray-900">Intelligent Chatbot</p>
+                                      <p className="text-sm text-gray-600">Answers any academic question</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                
+                {/* What Makes Mira Special Section */}
+                <div className="mt-16 max-w-4xl mx-auto">
+                  <div className="text-center mb-12">
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center">
+                      <Sparkles className="h-8 w-8 text-purple-600 mr-3" />
+                      What Makes Mira Special?
+                    </h3>
+                    <p className="text-xl text-gray-600">
+                      Discover the unique advantages that set Mira apart from traditional educational tools
+                    </p>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 border border-purple-100">
+                      <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                      </div>
+                      <h4 className="font-semibold text-lg mb-3 text-gray-900">Curriculum-Aligned Guidance</h4>
+                      <p className="text-gray-600">
+                        Mira ensures every response is tailored to your specific curriculum. Students can focus on learning, 
+                        while Mira delivers targeted solutions and resources directly relevant to their coursework—no extra searching required.
+                      </p>
+                    </div>
+                    
+                    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100">
+                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                      </div>
+                      <h4 className="font-semibold text-lg mb-3 text-gray-900">Reasoning & Planning</h4>
+                      <p className="text-gray-600">
+                        Mira can break down complex problems, create step-by-step solutions, and generate comprehensive 
+                        lesson plans that align with curriculum standards.
+                      </p>
+                    </div>
+                    
+                    <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                      <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
+                      </div>
+                      <h4 className="font-semibold text-lg mb-3 text-gray-900">Curriculum-Referenced Delivery</h4>
+                      <p className="text-gray-600">
+                        Mira ensures that every learning experience is grounded in the official curriculum by referencing 
+                        trusted resources such as NCERT textbooks, question banks, and model papers. Instead of students 
+                        spending time searching for reliable materials, Mira automatically pulls from these authoritative sources.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-12 text-center">
+                  <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 border border-purple-100">
+                    <h4 className="text-2xl font-bold text-gray-900 mb-4">Ready to Experience the Future of Education?</h4>
+                    <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                      Transform your learning experience with Mira's agentic AI that understands, adapts, and delivers personalized education.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-lg px-8 py-3" onClick={() => window.open('https://centumai.in', '_blank')}>
+                        Start Free Trial
+                      </Button>
+                      <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-2 border-purple-200 hover:bg-purple-50">
+                        Watch Demo
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -401,76 +645,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              About Centum AI
-            </h2>
-          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">Our Mission</h3>
-              <p className="text-lg text-gray-600 mb-6">
-                To democratize quality education through advanced AI that understands, adapts, and delivers 
-                personalized learning experiences that were previously impossible.
-              </p>
-              
-              <h3 className="text-2xl font-semibold mb-6">Why Agentic AI?</h3>
-              <p className="text-lg text-gray-600 mb-6">
-                Unlike traditional chatbots or search engines, our agentic AI can reason, plan, and adapt 
-                its responses based on context, learning styles, and educational objectives.
-              </p>
-
-              
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <Target className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                  <h4 className="font-semibold mb-2">Our Vision</h4>
-                  <p className="text-sm text-gray-600">
-                    A world where every learner has access to personalized, intelligent education
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <Users className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                  <h4 className="font-semibold mb-2">Our Values</h4>
-                  <p className="text-sm text-gray-600">
-                    Innovation, accessibility, and student-centered learning
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <Zap className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                  <h4 className="font-semibold mb-2">Our Impact</h4>
-                  <p className="text-sm text-gray-600">
-                    Measurable improvements in learning outcomes and engagement
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <TrendingUp className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-                  <h4 className="font-semibold mb-2">Our Growth</h4>
-                  <p className="text-sm text-gray-600">
-                    Rapidly expanding across schools and educational institutions
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">

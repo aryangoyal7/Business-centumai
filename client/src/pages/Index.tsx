@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { BookOpen, Users, Target, Zap, GraduationCap, TrendingUp, MessageSquare, BarChart, Brain, Sparkles, CheckCircle, XCircle } from "lucide-react";
-import ribhavPhoto from "@assets/1729106053975_1749289729048.jpeg";
+import karthikPhoto from "@assets/karthikeyan_profile.jpeg";
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -620,7 +620,7 @@ const Index = () => {
                   className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
                 />
                 <h3 className="text-xl font-semibold mb-2">Aryan Goyal</h3>
-                <p className="text-gray-600 mb-4">IIT Bombay | Tech Lead</p>
+                <p className="text-gray-600 mb-4">IIT Bombay</p>
                 <p className="text-sm text-gray-500">
                   Leading the development of our cutting-edge agentic AI platform with deep learning expertise.
                 </p>
@@ -630,14 +630,14 @@ const Index = () => {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <img 
-                  src={ribhavPhoto} 
-                  alt="Ribhav Mishra" 
+                  src={karthikPhoto} 
+                  alt="Karthikeyan Jaganathan" 
                   className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
                 />
-                <h3 className="text-xl font-semibold mb-2">Ribhav Mishra</h3>
-                <p className="text-gray-600 mb-4">IIT Bombay | Business Lead</p>
+                <h3 className="text-xl font-semibold mb-2">Karthikeyan Jaganathan</h3>
+                <p className="text-gray-600 mb-4">IIT Bombay</p>
                 <p className="text-sm text-gray-500">
-                  Finance and consultancy expert driving business strategy and market expansion initiatives.
+                  Architecting full-stack agentic AI systems with deep learning backends and modular, autonomous agent control.
                 </p>
               </CardContent>
             </Card>
@@ -666,10 +666,12 @@ const Index = () => {
                 <div>
                   <h4 className="font-semibold text-gray-900">Email</h4>
                   <p className="text-gray-600">aryan@centumai.in</p>
+                  <p className="text-gray-600">karthikiit13@gmail.com</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Phone</h4>
                   <p className="text-gray-600">+91 84277 28042</p>
+                  <p className="text-gray-600">+91 90081 32066</p>
                 </div>
                 
               </div>
